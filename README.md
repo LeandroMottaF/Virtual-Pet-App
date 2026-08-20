@@ -12,7 +12,7 @@ Compre carne e arraste até o seu pet para alimentá-lo.
 
 Se a fome chegar a 0%, o pet começará a chorar e, após um período sem cuidados, ele pode morrer.
 
-## Limpeza e Moedas 🧹:
+### Limpeza e Moedas 🧹:
 
 Com o tempo, o pet fará sujeiras no cenário. Arraste a vassoura até as sujeiras para limpá-las.
 
@@ -26,7 +26,7 @@ Animações e Especiais ✨: Os pets contam com ciclos de caminhada, piscadas di
 
 Persistência de Dados 💾: O progresso do jogo, moedas, itens e o estado do pet são salvos localmente (mesmo com o app fechado ou se o celular for reiniciado).
 
-# 🛠️ Tecnologias Utilizadas
+### 🛠️ Tecnologias Utilizadas
 React Native & TypeScript
 
 Expo (Expo Router, Expo Asset, Expo EAS Build)
