@@ -6,7 +6,7 @@ Um aplicativo de bichinho virtual estilo retro/pixel art desenvolvido em React N
 ## 🎮 Como Jogar e Funcionalidades
 Dê um Nome ao seu Pet: Assim que o app inicia pela primeira vez, você escolhe o nome do seu companheiro para começar a aventura.
 
-## Sistema de Fome 🍖:
+### Sistema de Fome 🍖:
 
 Compre carne e arraste até o seu pet para alimentá-lo.
 
@@ -26,7 +26,7 @@ Animações e Especiais ✨: Os pets contam com ciclos de caminhada, piscadas di
 
 Persistência de Dados 💾: O progresso do jogo, moedas, itens e o estado do pet são salvos localmente (mesmo com o app fechado ou se o celular for reiniciado).
 
-### 🛠️ Tecnologias Utilizadas
+## 🛠️ Tecnologias Utilizadas
 React Native & TypeScript
 
 Expo (Expo Router, Expo Asset, Expo EAS Build)
@@ -36,24 +36,25 @@ AsyncStorage (Salvamento local de progresso)
 React Native Animated & PanResponder (Animações e interações de drag-and-drop)
 
 # 🚀 Como Executar o Projeto Localmente
-Clone o repositório:
 
-'''
+1. Clone o repositório:
+
+```
 git clone https://github.com/leandromottafs/tamagotchi.git
 cd tamagotchi
-Instale as dependências:
-'''
 
-'''
+```
+2. Instale as dependências:
+```
 npm install
-Inicie o servidor de desenvolvimento:
-'''
-
-'''
+```
+3. Inicie o servidor de desenvolvimento:
+```
 npx expo start
-Execute no dispositivo:
-'''
 
-Abra o aplicativo Expo Go no celular e escaneie o código QR gerado no terminal, ou
+```
+4. Execute no dispositivo:
 
-Pressione a para rodar no emulador Android.
+- Abra o aplicativo no celular e escaneie o código QR gerado no terminal, ou
+
+- Pressione a para rodar no emulador Android.
