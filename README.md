@@ -42,7 +42,6 @@ React Native Animated & PanResponder (Animações e interações de drag-and-dro
 ```
 git clone https://github.com/leandromottafs/tamagotchi.git
 cd tamagotchi
-
 ```
 2. Instale as dependências:
 ```
@@ -51,7 +50,6 @@ npm install
 3. Inicie o servidor de desenvolvimento:
 ```
 npx expo start
-
 ```
 4. Execute no dispositivo:
 
