@@ -1,56 +1,59 @@
-# Welcome to your Expo app 👋
+🐾 Tamagotchi (Virtual Pet)
+Um aplicativo de bichinho virtual estilo retro/pixel art desenvolvido em React Native e Expo! O projeto simula a experiência clássica de cuidar de um pet virtual diretamente no celular, com sistema de movimentação, estado de fome, limpeza e persistência de dados.
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+📱 Nota do Desenvolvedor: Este projeto foi desenvolvido como um estudo e treino prático de desenvolvimento mobile, explorando conceitos de gerenciamento de estado complexo, loops de animação com sprites, manipulação de gestures/interações, persistência de dados locais e compilação de builds nativas com Expo EAS.
 
-## Get started
+🎮 Como Jogar e Funcionalidades
+Dê um Nome ao seu Pet: Assim que o app inicia pela primeira vez, você escolhe o nome do seu companheiro para começar a aventura.
 
-1. Install dependencies
+Sistema de Fome 🍖:
 
-   ```bash
-   npm install
-   ```
+Arraste o ícone de carne até o seu pet para alimentá-lo.
 
-2. Start the app
+Se a fome chegar a 0%, o pet começará a chorar e, após um período sem cuidados, ele pode morrer.
 
-   ```bash
-   npx expo start
-   ```
+Limpeza e Moedas 🧹:
 
-In the output, you'll find options to open the app in a
+Com o tempo, o pet fará sujeiras no cenário. Arraste a vassoura até as sujeiras para limpá-las.
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+Cada limpeza concede moedas ao jogador.
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+Loja 🛒: Use as moedas acumuladas na loja para comprar mais comida para o seu pet.
 
-## Get a fresh project
+Nível de Amizade 📊: Interaja e cuide do seu pet para aumentar o nível de amizade e acompanhar as estatísticas no menu de perfil.
 
-When you're ready, run:
+Animações e Especiais ✨: Os pets contam com ciclos de caminhada, piscadas dinâmicas e animações especiais periódicas.
 
-```bash
-npm run reset-project
-```
+Persistência de Dados 💾: O progresso do jogo, moedas, itens e o estado do pet são salvos localmente (mesmo com o app fechado ou se o celular for reiniciado).
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+🛠️ Tecnologias Utilizadas
+React Native & TypeScript
 
-### Other setup steps
+Expo (Expo Router, Expo Asset, Expo EAS Build)
 
-- To set up ESLint for linting, run `npx expo lint`, or follow our guide on ["Using ESLint and Prettier"](https://docs.expo.dev/guides/using-eslint/)
-- If you'd like to set up unit testing, follow our guide on ["Unit Testing with Jest"](https://docs.expo.dev/develop/unit-testing/)
-- Learn more about the TypeScript setup in this template in our guide on ["Using TypeScript"](https://docs.expo.dev/guides/typescript/)
+AsyncStorage (Salvamento local de progresso)
 
-## Learn more
+React Native Animated & PanResponder (Animações e interações de drag-and-drop)
 
-To learn more about developing your project with Expo, look at the following resources:
+🚀 Como Executar o Projeto Localmente
+Clone o repositório:
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+'''
+git clone https://github.com/leandromottafs/tamagotchi.git
+cd tamagotchi
+Instale as dependências:
+'''
 
-## Join the community
+'''
+npm install
+Inicie o servidor de desenvolvimento:
+'''
 
-Join our community of developers creating universal apps.
+'''
+npx expo start
+Execute no dispositivo:
+'''
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+Abra o aplicativo Expo Go no celular e escaneie o código QR gerado no terminal, ou
+
+Pressione a para rodar no emulador Android.
