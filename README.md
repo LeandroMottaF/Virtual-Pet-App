@@ -1,18 +1,18 @@
-🐾 Tamagotchi (Virtual Pet)
+# 🐾 Tamagotchi (Virtual Pet)
 Um aplicativo de bichinho virtual estilo retro/pixel art desenvolvido em React Native e Expo! O projeto simula a experiência clássica de cuidar de um pet virtual diretamente no celular, com sistema de movimentação, estado de fome, limpeza e persistência de dados.
 
 📱 Nota do Desenvolvedor: Este projeto foi desenvolvido como um estudo e treino prático de desenvolvimento mobile, explorando conceitos de gerenciamento de estado complexo, loops de animação com sprites, manipulação de gestures/interações, persistência de dados locais e compilação de builds nativas com Expo EAS.
 
-🎮 Como Jogar e Funcionalidades
+## 🎮 Como Jogar e Funcionalidades
 Dê um Nome ao seu Pet: Assim que o app inicia pela primeira vez, você escolhe o nome do seu companheiro para começar a aventura.
 
-Sistema de Fome 🍖:
+## Sistema de Fome 🍖:
 
-Arraste o ícone de carne até o seu pet para alimentá-lo.
+Compre carne e arraste até o seu pet para alimentá-lo.
 
 Se a fome chegar a 0%, o pet começará a chorar e, após um período sem cuidados, ele pode morrer.
 
-Limpeza e Moedas 🧹:
+## Limpeza e Moedas 🧹:
 
 Com o tempo, o pet fará sujeiras no cenário. Arraste a vassoura até as sujeiras para limpá-las.
 
@@ -26,7 +26,7 @@ Animações e Especiais ✨: Os pets contam com ciclos de caminhada, piscadas di
 
 Persistência de Dados 💾: O progresso do jogo, moedas, itens e o estado do pet são salvos localmente (mesmo com o app fechado ou se o celular for reiniciado).
 
-🛠️ Tecnologias Utilizadas
+# 🛠️ Tecnologias Utilizadas
 React Native & TypeScript
 
 Expo (Expo Router, Expo Asset, Expo EAS Build)
@@ -35,7 +35,7 @@ AsyncStorage (Salvamento local de progresso)
 
 React Native Animated & PanResponder (Animações e interações de drag-and-drop)
 
-🚀 Como Executar o Projeto Localmente
+# 🚀 Como Executar o Projeto Localmente
 Clone o repositório:
 
 '''
