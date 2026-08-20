@@ -7,7 +7,7 @@ export type PetData = {
   id: string;
   name: string;
   type: 'momoxi' | 'olho';
-  hunger: number;        // 0 a 100
+  hunger: number;
   friendshipExp: number; // Exp para o próximo nível
   friendshipLevel: number;
 };

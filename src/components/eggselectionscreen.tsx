@@ -3,7 +3,6 @@ import { View, Text, Image, TouchableOpacity, StyleSheet } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { Asset } from 'expo-asset';
 
-// 📦 Importação limpa do mesmo arquivo de assets da pasta
 import { EGG_SPRITES, EGG_PREVIEWS } from './assets';
 
 type PetType = 'momoxi' | 'olho';
@@ -16,7 +15,6 @@ export default function EggSelectionScreen({ onSelectEgg }: Props) {
   const [selected, setSelected] = useState<PetType>('momoxi');
   const [frameIndex, setFrameIndex] = useState(0);
 
-  // 🚀 1. Prefetch das imagens DENTRO do componente
   useEffect(() => {
     const ALL_EGG_SPRITES = [
       ...EGG_SPRITES.momoxi,
@@ -31,7 +29,6 @@ export default function EggSelectionScreen({ onSelectEgg }: Props) {
     });
   }, []);
 
-  // 🔄 2. Animação de mexer o ovo selecionado
   useEffect(() => {
     const interval = setInterval(() => {
       setFrameIndex((prev) => (prev === 0 ? 1 : 0));

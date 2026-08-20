@@ -10,7 +10,7 @@ type ShopModalProps = {
 };
 
 export default function ShopModal({ visible, onClose, coins, onBuyMeat }: ShopModalProps) {
-  const MEAT_PRICE = 15; // Preço de cada carne
+  const MEAT_PRICE = 15;
 
   const handleBuy = () => {
     if (coins >= MEAT_PRICE) {

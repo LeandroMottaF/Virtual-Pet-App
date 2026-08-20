@@ -2,7 +2,6 @@ import React, { useState, useEffect, useRef } from 'react';
 import { View, Text, Image, TouchableWithoutFeedback, StyleSheet, Animated } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
-// 📦 Importação do dicionário de sprites centralizado
 import { HATCH_EGG_SPRITES } from './assets';
 
 type PetType = 'momoxi' | 'olho';
@@ -24,7 +23,6 @@ export default function HatchScreen({ petChoice, onHatchComplete }: HatchProps) 
   const scaleAnim = useRef(new Animated.Value(1)).current;
   const shakeAnim = useRef(new Animated.Value(0)).current;
 
-  // 💥 Animação de "pop" de escala leve
   const triggerImpact = () => {
     scaleAnim.setValue(1);
     Animated.sequence([
@@ -41,7 +39,6 @@ export default function HatchScreen({ petChoice, onHatchComplete }: HatchProps) 
     ]).start();
   };
 
-  // 🫨 Animação de Tremer com parada limpa para evitar sobreposição
   const triggerShake = (intensity = 8) => {
     shakeAnim.stopAnimation();
     shakeAnim.setValue(0);
@@ -64,7 +61,6 @@ export default function HatchScreen({ petChoice, onHatchComplete }: HatchProps) 
   const currentSprites = HATCH_EGG_SPRITES[petChoice][stage];
   const allPetSprites = Object.values(HATCH_EGG_SPRITES[petChoice]).flat();
 
-  // 1. PROGRESSÃO AUTOMÁTICA
   useEffect(() => {
     if (stage === 'eclodindo' || stage === 'quaseEclodindo') return;
 
@@ -77,7 +73,6 @@ export default function HatchScreen({ petChoice, onHatchComplete }: HatchProps) 
     return () => clearTimeout(timer);
   }, [stage]);
 
-  // 2. CONTROLE FLUIDO DOS FRAMES DA ANIMAÇÃO
   useEffect(() => {
     if (stage === 'eclodindo') return;
 
@@ -106,9 +101,7 @@ export default function HatchScreen({ petChoice, onHatchComplete }: HatchProps) 
     }
   }, [stage, frameIndex]);
 
-  // 3. PASSO A PASSO DOS CLIQUES COM TREMOR
   const handleEggClick = () => {
-    // 🐣 Clique 1
     if (stage === 'quaseEclodindo' && isWaitingForClick) {
       triggerImpact();
       changeStage('eclodindo');
@@ -121,7 +114,6 @@ export default function HatchScreen({ petChoice, onHatchComplete }: HatchProps) 
       return;
     }
 
-    // 🫨 Clique 2 (Penúltimo - tremor leve)
     if (stage === 'eclodindo' && step === 1 && isWaitingForClick) {
       triggerImpact();
       triggerShake(3);
@@ -137,7 +129,6 @@ export default function HatchScreen({ petChoice, onHatchComplete }: HatchProps) 
       return;
     }
 
-    // 🫨 Clique 3 (Último antes de abrir - tremor forte)
     if (stage === 'eclodindo' && step === 2 && isWaitingForClick) {
       triggerImpact();
       triggerShake(10);
@@ -148,7 +139,6 @@ export default function HatchScreen({ petChoice, onHatchComplete }: HatchProps) 
       return;
     }
 
-    // 💥 Clique Final: Dispara a transição de iluminação
     if (stage === 'eclodindo' && step === 3 && isWaitingForClick) {
       triggerImpact();
       setFrameIndex(5);
@@ -157,18 +147,15 @@ export default function HatchScreen({ petChoice, onHatchComplete }: HatchProps) 
     }
   };
 
-  // 🎬 ANIMAÇÃO DE FADE IN SEGUIDA DE FADE OUT
   const triggerHatchFlash = () => {
-    const FADE_IN_TIME = 800; // Tempo até cobrir a tela
+    const FADE_IN_TIME = 800;
 
-    // 1. Apenas sobe o brilho suavemente
     Animated.timing(flashAnim, {
       toValue: 1,
       duration: FADE_IN_TIME,
       useNativeDriver: true,
     }).start();
 
-    // 2. Quando a tela estiver 100% coberta, avisa o MainGame para mudar de tela
     setTimeout(() => {
       onHatchComplete();
     }, FADE_IN_TIME);

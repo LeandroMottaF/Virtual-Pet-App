@@ -11,21 +11,17 @@ type PetProfileAvatarProps = {
 export default function PetProfileAvatar({ petChoice }: PetProfileAvatarProps) {
   const [frameIndex, setFrameIndex] = useState(0);
 
-  // 📦 Pega os sprites base
   const allSprites = PET_SPRITES[petChoice] || PET_SPRITES.momoxi;
 
-  // ✂️ Filtra a quantidade de frames de acordo com o pet:
-  // Momoxi: índices 0 a 8 (primeiros 9 sprites)
-  // Olho: índices 0 a 4 (primeiros 5 sprites)
   const maxFrames = petChoice === 'olho' ? 5 : 8;
   const idleSprites = allSprites.slice(0, maxFrames);
 
   useEffect(() => {
-    setFrameIndex(0); // Reseta o índice ao trocar de pet
+    setFrameIndex(0);
 
     const interval = setInterval(() => {
       setFrameIndex((prev) => (prev + 1) % idleSprites.length);
-    }, 150); // ⏱️ Velocidade da animação
+    }, 150);
 
     return () => clearInterval(interval);
   }, [petChoice, idleSprites.length]);

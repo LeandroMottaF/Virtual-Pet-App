@@ -34,7 +34,6 @@ import ShopModal from './shopmodal';
 
 const { width: SCREEN_WIDTH, height: SCREEN_HEIGHT } = Dimensions.get('window');
 
-// 🎯 Posição inicial centralizada na área visível da grama
 const INITIAL_X = Math.floor(SCREEN_WIDTH * 0.35);
 const INITIAL_Y = Math.floor(SCREEN_HEIGHT * 0.25);
 
@@ -52,13 +51,13 @@ const CRYING_ANIM_SPEED = 225;
 
 const SPECIAL_ANIM_INTERVAL = 60000;
 
-// ⏱️ 8 HORAS PARA 100% DE FOME
+
 const MS_PER_HUNGER_POINT = 288000;
 
-// ⏱️ TEMPO LIMITE COM FOME 0 ANTES DE MORRER
+
 const MS_STARVATION_DEATH = 86400000;
 
-// 💩 24 HORAS PARA 6 POOPS
+
 const MS_PER_POOP = 14400000;
 
 const MS_PER_OFFLINE_COIN = 3600000;
@@ -563,7 +562,6 @@ export default function GameMapScreen({
     });
   }, [selectedPet]);
 
-  // 🔄 Loop de Animações do Pet
   useEffect(() => {
     if (petActionState === 'REFUSE') {
       let currentStep = 0;
@@ -640,7 +638,6 @@ export default function GameMapScreen({
         const bodySequence = [0, 1, 2, 3, 4];
         const now = Date.now();
 
-        // ⏱️ CHECA SE ATINGIU O INTERVALO DO ESPECIAL
         if (
           currentSpecialSprites.length > 0 &&
           now - lastSpecialTimeRef.current >= SPECIAL_ANIM_INTERVAL
@@ -695,7 +692,6 @@ export default function GameMapScreen({
         return;
       }
 
-      // 🌟 EXECUTANDO A ANIMAÇÃO ESPECIAL (100+) SEM FLICKER
       if (isPlayingSpecial && currentConfig.specialFrames && currentConfig.specialFrames.length > 0) {
         setFrameIndex(100 + currentConfig.specialFrames[specialStep]);
         specialStep++;
@@ -743,7 +739,6 @@ export default function GameMapScreen({
     selectedPet,
   ]);
 
-  // 🖼️ Seletor de Sprite Ativo
   const getActiveSprite = () => {
     if (petActionState === 'REFUSE' && currentRefuseSprites.length > 0) {
       return currentRefuseSprites[frameIndex % currentRefuseSprites.length];

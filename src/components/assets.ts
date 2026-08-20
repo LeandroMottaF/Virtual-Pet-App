@@ -60,13 +60,11 @@ export const PET_CRYING_SPRITES = {
   ],
 };
 
-// 💩 SPRITES DO POOP
 export const POOP_SPRITES = [
   require('../../assets/poop_1.png'),
   require('../../assets/poop_2.png'),
 ];
 
-// 🧹 SPRITES DA VASSOURA
 export const BROOM_SPRITES = [
   require('../../assets/vassoura_1.png'),
   require('../../assets/vassoura_2.png'),
@@ -78,7 +76,7 @@ export const BROOM_SPRITES = [
   require('../../assets/vassoura_8.png'),
 ];
 export const BROOM_ICON_ASSET = require('../../assets/vassoura_icon.png');
-// 🗺️ SPRITES DO CENÁRIO
+// CENÁRIO
 export const MAP_ASSETS = {
   background: require('../../assets/map_background.png'),
   tree: require('../../assets/tree.png'),
